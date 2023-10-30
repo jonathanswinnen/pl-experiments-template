@@ -14,7 +14,6 @@ import lightning.pytorch.callbacks as plc
 import wandb
 import experiment.config as config
 from datetime import datetime
-from datamodule import HDF5DataModule
 from pathlib import Path
 
 class PlExperiment:
