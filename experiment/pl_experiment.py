@@ -17,7 +17,7 @@ from datetime import datetime
 from datamodule import HDF5DataModule
 from pathlib import Path
 
-class PLExperiment:
+class PlExperiment:
     def __init__(self, cfg_files, dict_edits={}):
         print("Initializing experiment...")
         self.cfg = config.merge(config.read(cfg_files), dict_edits)

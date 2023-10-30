@@ -7,7 +7,7 @@ ckpt_wandb: True
 model:
     load_ckpt_weights: null
     module:
-        __class_name__: models.DummyModel
+        __class_name__: model.DummyModel
         __params__:
             in_sz: 1
             out_sz: 1
