@@ -1,7 +1,7 @@
 """
 File: pl_experiment.py
 Author: Jonathan Swinnen
-Last Updated: 2023-09-11
+Last Updated: 2023-10-30
 Description: A class which represents an experiment. It contains a datamodule, model and trainer. 
              It handles loading the config file and building the objects from the loaded parameters to set up the experiment,
              and creates and calls the trainer to run the experiment.
