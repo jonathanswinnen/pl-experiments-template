@@ -1,0 +1,38 @@
+project_name: "Dummy Example Project"
+experiment_name: dummy_test
+
+log_wandb: True
+ckpt_wandb: True
+
+model:
+    load_ckpt_weights: null
+    module:
+        __class_name__: models.DummyModel
+        __params__:
+            in_sz: 1
+            out_sz: 1
+
+trainer:
+    ckpt_path: null
+    log_every_n_steps: 5
+    max_epochs: 10
+
+losses:
+    - loss:
+          __class_name__: torch.nn.MSELoss
+      weight: 1
+      log_name: mse
+
+optimizers:
+    - name: AdamW
+      params:
+          lr: 0.01
+          weight_decay: 0
+
+data_module:
+    __class_name__: datamodule.DummyDataModule
+    __params__:
+        n: 200
+        batch_size: 10
+    
+    
